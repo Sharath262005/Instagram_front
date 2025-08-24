@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <title>Instagram</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            scrollbar-width: none;
+        }
+
+        .container {
+            height: 100dvh;
+            width: 100dvw;
+            background-color: aqua;
+            display: flex;
+
+        }
+
+        .left {
+            height: 100dvh;
+            width: 20%;
+            background-color: rgb(19, 19, 19);
+
+        }
+
+        .child2 {
+            width: 25%;
+            min-height: 100dvh;
+            background-color: rgb(16, 16, 16);
+
+        }
+
+        .row1 {
+            height: 90px;
+            width: 100%;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .row2 {
+            height: 50px;
+            width: 100%;
+            border-radius: 15px;
+            background-color: rgb(16, 16, 16);
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .row2:hover {
+            background-color: rgb(45, 45, 45);
+            cursor: pointer;
+
+        }
+
+        .sharath {
+            padding: 20px;
+        }
+
+        .profile {
+            height: 100px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .p {
+            height: 40px;
+            width: 40px;
+            background-color: gray;
+            color: white;
+            font-size: 40px;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .id {
+            font-size: 20px;
+        }
+
+        .switch {
+            font-size: 20px;
+            color: lightskyblue;
+        }
+
+        .switch:hover {
+            color: rgb(58, 123, 177);
+            cursor: pointer;
+        }
+
+        .suggestion {
+            height: 50px;
+            width: 100%;
+            background-color: rgb(16, 16, 16);
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .suggestion:hover {
+            background-color: rgb(39, 39, 39);
+        }
+
+        .sug {
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(16, 16, 16);
+        }
+
+        .see {
+            padding: 10px;
+            color: white;
+        }
+
+        .all {
+            padding: 10px;
+            color: rgb(100, 100, 100);
+        }
+
+        .see:hover {
+            color: gray;
+            cursor: pointer;
+        }
+
+        .child1 {
+            width: 55%;
+            height: 100dvh;
+            background-color: blue;
+        }
+
+        .rowup {
+            width: 100%;
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow-x: scroll;
+        }
+
+        .rowdown {
+            width: 100%;
+            background-color:black;
+        }
+
+        .box {
+            margin: 10px;
+            border-radius: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxout {
+            height: 60px;
+            width: 60px;
+            background: #833ab4;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50px;
+        }
+
+        .boxin {
+            height: 55px;
+            width: 55px;
+            border-radius: 25px;
+            background-image: url(car2.jpg);
+            background-size: 45px;
+            color: white;
+        }
+
+        .reel {
+            height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+            border-width: 10px solid white;
+        }
+
+        .reel1 {
+            height: 600px;
+            width: 400px;
+            background-color: yellow;
+            border-radius: 15px;
+            margin: 20px;
+        }
+
+        .part1 {
+            height: 70px;
+            background-color: black;
+            border-radius: 15px 15px 0px 0px;
+            border: 1px solid grey;
+            font-size: 25px;
+            padding: 2px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info1 {
+            height: 55px;
+            width: 55px;
+            background: #833ab4;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #fcb045, #fd1d1d, #833ab4);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .img {
+            height: 50px;
+            width: 50px;
+            background-image: url(car.webp);
+            background-size: cover;
+            border-radius: 25px;
+        }
+
+        .p1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part2 {
+            height: 450px;
+            background-image: url(car2.jpg);
+            background-size: cover;
+            border-right: 1px solid grey;
+            border-left: 1px solid grey;
+        }
+
+        .u1 {
+            height: 20px;
+            background-color: black;
+            font-size: 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .u2 {
+            height: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 0px 0px 20px 20px;
+        }
+
+        .U2 {
+            background-color: black;
+            border: none;
+            border-width: 0px;
+        }
+        .part3{
+            border: 1px solid grey;
+            border-radius: 0px 0px 20px 20px;
+        }
+        .info2{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <div class="row1">
+                <img height="60px" src="instagramlogo.png" alt="">
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+                <h>Home</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <h>Search</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-compass"></i>
+                </div>
+                <h>Explore</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-circle-play"></i>
+                </div>
+                <h>Reels</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+                <h>Messages</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <h>Notifications</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-square-plus"></i>
+                </div>
+                <h>Create</h>
+            </div>
+            <div class="row2">
+                <div class="sharath">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <h>Profile</h>
+            </div>
+        </div>
+        <div class="child1">
+            <div class="rowup">
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="boxout">
+                        <div class="boxin">
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="rowdown">
+                <div class="reel">
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reel1">
+                        <div class="part1">
+                            <div class="p1">
+                                <div class="info1">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="info2">
+                                    <table >
+                                    <tr>
+                                        <th>sharath_edits</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sid sriram..</td>
+                                    </tr>
+                                </table>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="part2">
+                        </div>
+                        <div class="part3">
+                            <div class="u1">
+                                <div class="U1">
+                                    <i class="fa-regular fa-heart"></i>
+                                    <i class="fa-regular fa-comment"></i>
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                            <div class="u2">
+                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
+                                <i class="fa-regular fa-face-smile"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="child2">
+            <div class="profile">
+                <div class="p">
+                    <i class="fa-solid fa-circle-user"></i>
+                </div>
+                <div class="id">
+                    <table>
+                        <tr>
+                            <td>Kelothu_sharath5</td>
+                        </tr>
+                        <tr>
+                            <td>kelothu sharath</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="switch">
+                    <h>switch</h>
+                </div>
+            </div>
+            <div class="sug">
+                <div class="all">
+                    <b>suggested for you</b>
+                </div>
+                <div class="see">
+                    <b>see all</b>
+                </div>
+            </div>
+            <div class="suggestion">
+                <i class="fa-solid fa-circle-user"></i>
+                <h>mr_heart_stoler</h>
+                <div class="switch">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="suggestion">
+                <i class="fa-solid fa-circle-user"></i>
+                <h>vignan_kasam</h>
+                <div class="switch">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="suggestion">
+                <i class="fa-solid fa-circle-user"></i>
+                <h>pavan_rockstar</h>
+                <div class="switch">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="suggestion">
+                <i class="fa-solid fa-circle-user"></i>
+                <h>call_me_venu</h>
+                <div class="switch">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <div class="suggestion">
+                <i class="fa-solid fa-circle-user"></i>
+                <h>mr_heart_stoler</h>
+                <div class="switch">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
