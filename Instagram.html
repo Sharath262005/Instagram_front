@@ -14,9 +14,9 @@
         }
 
         .container {
-            height: 100dvh;
-            width: 100dvw;
-            background-color: aqua;
+            width: 100%;
+            height: fit-content;
+            background-color: black;
             display: flex;
 
         }
@@ -24,14 +24,26 @@
         .left {
             height: 100dvh;
             width: 20%;
-            background-color: rgb(19, 19, 19);
+            background-color: black;
+            position: fixed;
+            left: 0px;
 
+        }
+
+        .child1 {
+            width: 55%;
+            height: 100dvh;
+            background-color: blue;
+            position: relative;
+            left: 20%;
         }
 
         .child2 {
             width: 25%;
-            min-height: 100dvh;
-            background-color: rgb(16, 16, 16);
+            height: 3000px;
+            background-color: black;
+            position: sticky;
+            left: 75%;
 
         }
 
@@ -48,7 +60,7 @@
             height: 50px;
             width: 100%;
             border-radius: 15px;
-            background-color: rgb(16, 16, 16);
+            background-color: black;
             color: white;
             font-size: 20px;
             display: flex;
@@ -105,7 +117,7 @@
         .suggestion {
             height: 50px;
             width: 100%;
-            background-color: rgb(16, 16, 16);
+            background-color: black;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
@@ -139,11 +151,6 @@
             cursor: pointer;
         }
 
-        .child1 {
-            width: 55%;
-            height: 100dvh;
-            background-color: blue;
-        }
 
         .rowup {
             width: 100%;
@@ -157,7 +164,12 @@
 
         .rowdown {
             width: 100%;
-            background-color:black;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
         }
 
         .box {
@@ -256,10 +268,12 @@
 
         .part2 {
             height: 450px;
-            background-image: url(car2.jpg);
-            background-size: cover;
             border-right: 1px solid grey;
             border-left: 1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
         }
 
         .u1 {
@@ -288,11 +302,13 @@
             border: none;
             border-width: 0px;
         }
-        .part3{
+
+        .part3 {
             border: 1px solid grey;
             border-radius: 0px 0px 20px 20px;
         }
-        .info2{
+
+        .info2 {
             font-size: 20px;
         }
     </style>
@@ -358,11 +374,9 @@
                 <div class="box">
                     <div class="boxout">
                         <div class="boxin">
-
                         </div>
                     </div>
                 </div>
-
                 <div class="box">
                     <div class="boxout">
                         <div class="boxin">
@@ -442,8 +456,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
             <div class="rowdown">
                 <div class="reel">
@@ -454,19 +466,20 @@
                                     <div class="img"></div>
                                 </div>
                                 <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
+                                    <table>
+                                        <tr>
+                                            <th>sharath_edits</th>
+                                        </tr>
+                                        <tr>
+                                            <td>sid sriram..</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <i class="fa-solid fa-ellipsis"></i>
                         </div>
                         <div class="part2">
+                            <img height="225px" src="car.webp" alt="">
                         </div>
                         <div class="part3">
                             <div class="u1">
@@ -483,6 +496,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="reel">
                     <div class="reel1">
                         <div class="part1">
                             <div class="p1">
@@ -490,19 +505,20 @@
                                     <div class="img"></div>
                                 </div>
                                 <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
+                                    <table>
+                                        <tr>
+                                            <th>sharath_edits</th>
+                                        </tr>
+                                        <tr>
+                                            <td>sid sriram..</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <i class="fa-solid fa-ellipsis"></i>
                         </div>
                         <div class="part2">
+                            <img height="220px" src="car L.jpg" alt="">
                         </div>
                         <div class="part3">
                             <div class="u1">
@@ -519,6 +535,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="reel">
                     <div class="reel1">
                         <div class="part1">
                             <div class="p1">
@@ -526,19 +544,20 @@
                                     <div class="img"></div>
                                 </div>
                                 <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
+                                    <table>
+                                        <tr>
+                                            <th>sharath_edits</th>
+                                        </tr>
+                                        <tr>
+                                            <td>sid sriram..</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <i class="fa-solid fa-ellipsis"></i>
                         </div>
                         <div class="part2">
+                            <img src="car1.jpg" height="220px" alt="">
                         </div>
                         <div class="part3">
                             <div class="u1">
@@ -555,6 +574,8 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="reel">
                     <div class="reel1">
                         <div class="part1">
                             <div class="p1">
@@ -562,235 +583,20 @@
                                     <div class="img"></div>
                                 </div>
                                 <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
+                                    <table>
+                                        <tr>
+                                            <th>sharath_edits</th>
+                                        </tr>
+                                        <tr>
+                                            <td>sid sriram..</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                             <i class="fa-solid fa-ellipsis"></i>
                         </div>
                         <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
-                        </div>
-                        <div class="part3">
-                            <div class="u1">
-                                <div class="U1">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-regular fa-comment"></i>
-                                    <i class="fa-regular fa-paper-plane"></i>
-                                </div>
-                                <i class="fa-regular fa-bookmark"></i>
-                            </div>
-                            <div class="u2">
-                                <input class="U2" height="20" type="text" placeholder="Add a comment...">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reel1">
-                        <div class="part1">
-                            <div class="p1">
-                                <div class="info1">
-                                    <div class="img"></div>
-                                </div>
-                                <div class="info2">
-                                    <table >
-                                    <tr>
-                                        <th>sharath_edits</th>
-                                    </tr>
-                                    <tr>
-                                        <td>sid sriram..</td>
-                                    </tr>
-                                </table>
-                                </div>
-                            </div>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
-                        <div class="part2">
+                            <img src="car2.jpg" height="450px" alt="">
                         </div>
                         <div class="part3">
                             <div class="u1">
